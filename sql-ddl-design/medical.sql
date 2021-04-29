@@ -17,7 +17,7 @@ CREATE TABLE patients
   id SERIAL PRIMARY KEY,
  first_name TEXT NOT NULL,
   last_name TEXT NOT NULL,
-  birthday DATE, 
+  birthday INTEGER
 );
 
 CREATE TABLE visit
@@ -25,26 +25,27 @@ CREATE TABLE visit
   id SERIAL PRIMARY KEY,
   doctor_id INTEGER REFERENCES doctors,
   patient_id INTEGER REFERENCES patients,
-  date DATE NOT NULL
+  date INTEGER NOT NULL
 );
+
 CREATE TABLE disease
 (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
   discription TEXT
 );
-CREATE TABLE diagnosis
+CREATE TABLE diagnosis 
 (
   id SERIAL PRIMARY KEY,
-  visit_id INTEGER REFERENCES visit ON DELETE NULL,
-  disease_id INTEGER REFERENCES disease ON DELETE NULL,
+  visit_id INTEGER REFERENCES visit,
+  disease_id INTEGER REFERENCES disease,
   notes TEXT
 );
 
 INSERT INTO doctors
   (first_name, last_name, specialty)
 VALUES
-  ('Jane','Doe' 'Internal medicine');
+  ('Jane','Doe', 'Internal medicine');
 
 
 INSERT INTO patients
@@ -56,7 +57,7 @@ VALUES
 INSERT INTO visit
   (doctor_id, patient_id, date)
 VALUES
-  (1, 2, '2021-01-22');
+  (1, 2, 2021-01-22);
 
 INSERT INTO disease
   (name, discription)
@@ -66,5 +67,5 @@ VALUES
 INSERT INTO diagnosis
 (visit_id, disease_id)
 VALUES
-(1, 2)
+(1, 2);
   

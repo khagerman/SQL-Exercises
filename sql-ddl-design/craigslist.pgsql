@@ -30,7 +30,7 @@ CREATE TABLE posts
     title VARCHAR(20) NOT NULL,
     content TEXT NOT NULL,
     region_id INTEGER NOT NULL REFERENCES regions,
-    category_id INTEGER NOT NULL REFERENCES category,
-    user INTEGER NOT NULL REFERENCES users,
+    category_id INTEGER NOT NULL REFERENCES categories,
+    user_id INTEGER NOT NULL REFERENCES users
  
 );
