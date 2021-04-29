@@ -43,7 +43,7 @@ VALUES
  ('United States'), ('United Kingdom'), ('Japan'),
  ('Mexico'),('Morocco'),('France'),
  ('UAE'),('Brazil'),('Chile'), 
- ('China')
+ ('China');
 
 INSERT INTO airlines 
 (airline_name) 
@@ -60,7 +60,7 @@ VALUES
   ('Mexico City'),('Paris'),('Casablanca'),
   ('Dubai'),('Beijing'),('New York'),
   ('Charlotte'),('Cedar Rapids'),('Chicago'),
-  ('New Orleans'),('Sao Paolo'),('Santiago')
+  ('New Orleans'),('Sao Paolo'),('Santiago');
 
 
 INSERT INTO tickets
