@@ -8,7 +8,7 @@ CREATE TABLE teams
 (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
-    city TEXT NOT NULL,
+    city TEXT NOT NULL
 );
 
 CREATE TABLE players
@@ -37,7 +37,7 @@ CREATE TABLE matches (
     date DATE,
      referee_id INTEGER REFERENCES referees,
     season_id INTEGER REFERENCES seasons
-)
+);
 CREATE TABLE results (
     id SERIAL PRIMARY KEY,
     match_id  INTEGER REFERENCES matches,
